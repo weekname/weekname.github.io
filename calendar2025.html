@@ -1,141 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-<style>:root{--color-primary:#021835;}</style>
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="HandheldFriendly" content="True">
-<meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit=no>
-<meta name="description" content="This simple monthly calendar helps you track important dates, events, and appointments. Each box represents a day. You can print it out or use it digitally.">
-<title>Calendar 2025</title>
-<link rel="canonical" href="/calendar2025.html">
-<meta name="robots" content="index, follow" />
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f0f2f5;
-    }
-    header {
-      background: #3f51b5;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 20px;
-    }
-    .calendar {
-      flex: 1;
-      min-width: 300px;
-      background: white;
-      padding: 20px;
-      margin-right: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .calendar h2 {
-      text-align: center;
-      margin-top: 0;
-    }
-    .calendar table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .calendar th, .calendar td {
-      width: 14.28%;
-      padding: 10px;
-      text-align: center;
-      border: 1px solid #ccc;
-    }
-    .calendar th {
-      background-color: #e8eaf6;
-    }
-    .article {
-      flex: 2;
-      min-width: 300px;
-      background: white;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .article h2 {
-      margin-top: 0;
-    }
-    .article section {
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calendar 2025</title>
+  <meta name="description" content="A calendar is a system of organizing days for social, religious, commercial, or administrative purposes. This is done by giving names to periods of time, typically days, weeks, months, and years.">
+  <link rel="canonical" href="/calendar2025.html">
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="img/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .calendar-container {
+            flex: 1;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .articles-container {
+            flex: 2;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .calendar-header h2 {
+            color: #2c3e50;
+        }
+        
+        .calendar-header button {
+            background: #6a11cb;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .calendar-header button:hover {
+            background: #2575fc;
+        }
+        
+        .calendar {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .calendar th {
+            padding: 12px;
+            text-align: center;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .calendar td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #e1e4e8;
+            cursor: pointer;
+            transition: all 0.2s;
+            height: 45px;
+            width: 45px;
+        }
+        
+        .calendar td:hover {
+            background-color: #e6effd;
+            transform: scale(1.05);
+        }
+        
+        .current-day {
+            background-color: #2575fc;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            font-weight: bold;
+        }
+        
+        .other-month {
+            color: #aaa;
+        }
+        
+        .event-day {
+            position: relative;
+        }
+        
+        .event-day::after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background-color: #6a11cb;
+            border-radius: 50%;
+        }
+        
+        .articles-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 15px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background: #f0f4f8;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            background: #6a11cb;
+            color: white;
+        }
+        
+        .tab:hover {
+            background: #2575fc;
+            color: white;
+        }
+        
+        .article {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        .article:last-child {
+            border-bottom: none;
+        }
+        
+        .article h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .article p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #6a11cb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .read-more:hover {
+            background: #2575fc;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            color: #666;
+            border-top: 1px solid #e1e4e8;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #f0f4f8;
+            color: #6a11cb;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: #6a11cb;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .articles-tabs {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <h1>Online Calendar 20225</h1>
-    <p>Plan, Organize, and Stay Ahead</p>
-  </header>
-
-  <div class="container">
-    <!-- Calendar Section -->
-    <div class="calendar">
-      <h2>September 2025</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-          <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
-          <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-          <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
-          <tr><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
-        </tbody>
-      </table>
+    <div class="container">
+        <header>
+            <h1>Calendar 2025</h1>
+            <p class="tagline">Explore time, plan your days, and discover calendar history</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prev-month"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <h2 id="current-month-year">April 2023</h2>
+                    <button id="next-month">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+                <table class="calendar">
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- Calendar days will be generated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="articles-container">
+                <h2>Calendar Articles</h2>
+                <div class="articles-tabs">
+                    <div class="tab active" data-tab="all">All Articles</div>
+                    <div class="tab" data-tab="history">History</div>
+                    <div class="tab" data-tab="features">Features</div>
+                    <div class="tab" data-tab="uses">Uses</div>
+                </div>
+                
+                <div class="article" data-category="history">
+                    <h3>What is a Calendar?</h3>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> April 5, 2023</span>
+                        <span><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                    <p>A calendar is a system of organizing days for social, religious, commercial, or administrative purposes. This is done by giving names to periods of time, typically days, weeks, months, and years...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                
+                <div class="article" data-category="history">
+                    <h3>History of Calendars</h3>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> April 12, 2023</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <p>The history of calendars spans several thousand years as various civilizations developed different systems to track time and seasons. The earliest calendars were lunar-based, with the Roman calendar later evolving into the Julian and eventually the Gregorian calendar we use today...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                
+                <div class="article" data-category="features">
+                    <h3>Key Features of Modern Calendars</h3>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> April 18, 2023</span>
+                        <span><i class="far fa-clock"></i> 6 min read</span>
+                    </div>
+                    <p>Modern calendars, whether physical or digital, come with a variety of features designed to help us manage our time effectively. These include monthly, weekly, and daily views, event scheduling, reminders, sharing capabilities, and integration with other applications...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                
+                <div class="article" data-category="uses">
+                    <h3>Practical Uses of Calendars</h3>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> April 25, 2023</span>
+                        <span><i class="far fa-clock"></i> 7 min read</span>
+                    </div>
+                    <p>Calendars serve numerous practical purposes in our daily lives. They help us schedule appointments, remember important dates, plan projects, coordinate with others, and manage our time efficiently. Businesses rely on calendars for planning, deadlines, and coordinating team activities...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Calendar Insights &copy; 2023. All rights reserved.</p>
+            <p>Discover the fascinating world of timekeeping and organization</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </footer>
     </div>
 
-    <!-- Article Section -->
-    <div class="article">
-      <h2>About This Calendar</h2>
+    <script>
+        // Calendar functionality
+        let currentDate = new Date();
+        let currentMonth = currentDate.getMonth();
+        let currentYear = currentDate.getFullYear();
 
-      <section>
-        <h3>How to Use</h3>
-        <p>
-          This simple monthly calendar helps you track important dates, events, and appointments. Each box represents a day.
-          You can print it out or use it digitally. In future updates, you’ll be able to click on a day to add notes or tasks.
-        </p>
-      </section>
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
 
-      <section>
-        <h3>Why Plan Ahead?</h3>
-        <ul>
-          <li>✅ Stay organized and avoid last-minute stress</li>
-          <li>✅ Track progress on personal or work goals</li>
-          <li>✅ Manage time effectively and improve productivity</li>
-          <li>✅ Never miss a deadline or appointment</li>
-        </ul>
-      </section>
+        function generateCalendar(month, year) {
+            const calendarBody = document.getElementById('calendar-body');
+            const currentMonthYear = document.getElementById('current-month-year');
+            
+            // Clear previous calendar
+            calendarBody.innerHTML = '';
+            currentMonthYear.textContent = `${monthNames[month]} ${year}`;
+            
+            // First day of the month
+            const firstDay = new Date(year, month, 1);
+            // Last day of the month
+            const lastDay = new Date(year, month + 1, 0);
+            // Days in month
+            const daysInMonth = lastDay.getDate();
+            // Starting day of the week (0 = Sunday, 1 = Monday, etc.)
+            const startDay = firstDay.getDay();
+            
+            // Previous month days
+            const prevMonthLastDay = new Date(year, month, 0).getDate();
+            
+            // Generate calendar days
+            let date = 1;
+            let nextMonthDate = 1;
+            
+            for (let i = 0; i < 6; i++) {
+                const row = document.createElement('tr');
+                
+                for (let j = 0; j < 7; j++) {
+                    const cell = document.createElement('td');
+                    
+                    if (i === 0 && j < startDay) {
+                        // Previous month
+                        const prevDate = prevMonthLastDay - (startDay - j - 1);
+                        cell.textContent = prevDate;
+                        cell.classList.add('other-month');
+                    } else if (date > daysInMonth) {
+                        // Next month
+                        cell.textContent = nextMonthDate;
+                        cell.classList.add('other-month');
+                        nextMonthDate++;
+                    } else {
+                        // Current month
+                        cell.textContent = date;
+                        
+                        // Highlight current day
+                        if (date === currentDate.getDate() && 
+                            month === currentDate.getMonth() && 
+                            year === currentDate.getFullYear()) {
+                            cell.innerHTML = `<span class="current-day">${date}</span>`;
+                        }
+                        
+                        // Add event indicator to random days
+                        if (Math.random() > 0.7 && date > currentDate.getDate()) {
+                            cell.classList.add('event-day');
+                        }
+                        
+                        date++;
+                    }
+                    
+                    row.appendChild(cell);
+                }
+                
+                calendarBody.appendChild(row);
+                
+                // Stop creating rows if we've displayed all days
+                if (date > daysInMonth && nextMonthDate > 7) {
+                    break;
+                }
+            }
+        }
 
-      <section>
-        <h3>Upcoming Features</h3>
-        <p>We’re working on making this calendar interactive. Soon you’ll be able to:</p>
-        <ul>
-          <li>🖊️ Add and edit events</li>
-          <li>🔔 Set reminders</li>
-          <li>📆 Switch between months</li>
-          <li>🌐 Sync with your Google or Outlook Calendar</li>
-        </ul>
-      </section>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        const articles = document.querySelectorAll('.article');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                const category = tab.dataset.tab;
+                
+                // Show/hide articles based on category
+                articles.forEach(article => {
+                    if (category === 'all' || article.dataset.category === category) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        });
 
-      <section>
-        <h3>Feedback Welcome</h3>
-        <p>If you have suggestions or would like specific features, feel free to send feedback through our contact page (coming soon!).</p>
-      </section>
+        // Event listeners for month navigation
+        document.getElementById('prev-month').addEventListener('click', () => {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            generateCalendar(currentMonth, currentYear);
+        });
 
-    </div>
-  </div>
+        document.getElementById('next-month').addEventListener('click', () => {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            generateCalendar(currentMonth, currentYear);
+        });
 
+        // Initialize calendar
+        generateCalendar(currentMonth, currentYear);
+    </script>
 </body>
 </html>
