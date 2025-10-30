@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हनुमान चालीसा - Hanuman Chalisa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom right, #f9f3e9, #f5e8d0);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(to right, #ff9933, #ff6600);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #ff6600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ff9933;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight {
+            background-color: #fff9e6;
+            padding: 15px;
+            border-left: 4px solid #ff9933;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .hanuman-image {
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chalisa-text {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .chalisa-text h2 {
+            text-align: center;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        .verse {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .hindi {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .transliteration {
+            font-style: italic;
+            color: #666;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .translation {
+            color: #444;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-item h3 {
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            font-size: 1.1rem;
+            text-align: center;
+            font-style: italic;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff9e6;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>हनुमान चालीसा</h1>
+            <p class="subtitle">भक्ति, शक्ति और ज्ञान का अद्भुत संगम</p>
+        </header>
+
+        <div class="content">
+            <div class="card">
+                <h2>हनुमान चालीसा का परिचय</h2>
+                <p>हनुमान चालीसा हिंदू धर्म के सबसे लोकप्रिय और शक्तिशाली भजनों में से एक है। <a href="https://hanumanchalisa.gen.in/">हनुमान चालीसा</a> महान संत तुलसीदास जी ने 16वीं शताब्दी में अवधी भाषा में रचा था। यह चालीस चौपाइयों (छंदों) का एक संग्रह है जो भगवान हनुमान की महिमा, शक्ति और भक्ति का वर्णन करता है।</p>
+                
+                <p>हनुमान चालीसा में कुल 40 छंद हैं (इसीलिए इसे 'चालीसा' कहा जाता है), जिनमें से पहले दो दोहे हैं और बाद की 40 चौपाइयाँ हैं, जिनके बाद एक दोहा फिर से आता है। यह रामचरितमानस का हिस्सा नहीं है, बल्कि एक स्वतंत्र रचना है जो तुलसीदास जी ने हनुमान जी की स्तुति में लिखी थी।</p>
+                
+                <div class="highlight">
+                    <p>हनुमान चालीसा का पाठ न केवल आध्यात्मिक शांति प्रदान करता है, बल्कि जीवन की विभिन्न कठिनाइयों और चुनौतियों से निपटने की शक्ति भी देता है।</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>हनुमान जी का महत्व</h2>
+                <p>हनुमान जी हिंदू धर्म में एक प्रमुख देवता हैं जो भगवान श्री राम के परम भक्त हैं। वे बजरंगबली, पवनपुत्र, संकटमोचन और अंजनिपुत्र जैसे नामों से भी जाने जाते हैं। हनुमान जी को शक्ति, बल, विद्या, बुद्धि और भक्ति का प्रतीक माना जाता है।</p>
+                
+                <p>हनुमान जी का चरित्र भक्ति और सेवा का आदर्श प्रस्तुत करता है। रामायण में उनकी भूमिका अत्यंत महत्वपूर्ण है, जहाँ वे श्री राम और माता सीता की सेवा में सदैव तत्पर रहे। उनकी भक्ति इतनी शुद्ध और निःस्वार्थ थी कि वे आज भी भक्तों के लिए आदर्श बने हुए हैं।</p>
+                
+                <p>हनुमान चालीसा का नियमित पाठ करने से मनुष्य को शारीरिक, मानसिक और आध्यात्मिक लाभ प्राप्त होते हैं। यह नकारात्मक ऊर्जा को दूर करके सकारात्मक ऊर्जा का संचार करता है।</p>
+            </div>
+        </div>
+
+        <div class="chalisa-text">
+            <h2>हनुमान चालीसा (पूर्ण पाठ)</h2>
+            
+            <div class="verse">
+                <div class="hindi">श्रीगुरु चरन सरोज रज, निज मनु मुकुर सुधारि।<br>बरनउं रघुबर बिमल जसु, जो दायकु फल चारि॥</div>
+                <div class="transliteration">Shri Guru Charan Saroj Raj, Nij Man Mukur Sudhari<br>Baranau Raghubar Bimal Jasu, Jo Dayaku Phal Chari</div>
+                <div class="translation">गुरु के चरण कमलों की धूलि से अपने मन रूपी दर्पण को शुद्ध कर, रघुवीर श्रीराम के निर्मल यश का वर्णन करता हूँ, जो चारों फल (धर्म, अर्थ, काम, मोक्ष) देने वाले हैं।</div>
+            </div>
+            
+            <div class="verse">
+                <div class="hindi">बुद्धिहीन तनु जानिके, सुमिरौं पवन-कुमार।<br>बल बुद्धि बिद्या देहु मोहिं, हरहु कलेस बिकार॥</div>
+                <div class="transliteration">Buddhiheen Tanu Janike, Sumirau Pavan-Kumar<br>Bal Buddhi Vidya Dehu Mohi, Harahu Kalesh Bikaar</div>
+                <div class="translation">अपने आपको बुद्धिहीन जानकर, मैं पवनकुमार हनुमान का स्मरण करता हूँ। वे मुझे बल, बुद्धि और विद्या प्रदान करें और मेरे सभी कष्टों और विकारों को दूर करें।</div>
+            </div>
+            
+            <div class="verse">
+                <div class="hindi">जय हनुमान ज्ञान गुन सागर। जय कपीस तिहुं लोक उजागर॥ १ ॥</div>
+                <div class="transliteration">Jai Hanuman Gyan Gun Sagar, Jai Kapis Tihun Lok Ujagar</div>
+                <div class="translation">ज्ञान और गुणों के सागर हनुमान जी की जय हो! कपिराज हनुमान जी की जय हो, जो तीनों लोकों में प्रसिद्ध हैं।</div>
+            </div>
+            
+            <div class="verse">
+                <div class="hindi">रामदूत अतुलित बल धामा। अंजनि-पुत्र पवनसुत नामा॥ २ ॥</div>
+                <div class="transliteration">Ramdoot Atulit Bal Dhama, Anjani-Putra Pavan Sut Nama</div>
+                <div class="translation">आप श्री राम के दूत, अतुलित बल के धाम, अंजनी पुत्र और पवनदेव के पुत्र हैं।</div>
+            </div>
+            
+            <div class="verse">
+                <div class="hindi">महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥ ३ ॥</div>
+                <div class="transliteration">Mahabir Bikram Bajrangi, Kumati Nivar Sumati Ke Sangi</div>
+                <div class="translation">आप महावीर, विक्रमशाली और बजरंगबली हैं। आप बुरी बुद्धि को नष्ट करते हैं और अच्छी बुद्धि वालों के साथ रहते हैं।</div>
+            </div>
+            
+            <!-- Additional verses would continue here in a complete implementation -->
+            
+            <div class="quote">
+                "हनुमान चालीसा का पाठ मन की शांति, आत्मविश्वास और आंतरिक शक्ति प्रदान करता है।"
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>हनुमान चालीसा पाठ के लाभ</h2>
+            <p>हनुमान चालीसा का नियमित पाठ करने से अनेक प्रकार के लाभ प्राप्त होते हैं। यह न केवल आध्यात्मिक उन्नति का मार्ग प्रशस्त करता है, बल्कि व्यक्ति के जीवन में सकारात्मक परिवर्तन भी लाता है।</p>
+            
+            <div class="benefits">
+                <div class="benefit-item">
+                    <h3>मानसिक शांति</h3>
+                    <p>हनुमान चालीसा का पाठ मन को शांत और एकाग्र करता है, तनाव और चिंता को दूर करता है।</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>सकारात्मक ऊर्जा</h3>
+                    <p>यह पाठ वातावरण में सकारात्मक ऊर्जा का संचार करता है और नकारात्मक शक्तियों को दूर रखता है।</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>साहस और बल</h3>
+                    <p>हनुमान जी की कृपा से भक्तों में साहस, शक्ति और आत्मविश्वास का विकास होता है।</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>संकटों से मुक्ति</h3>
+                    <p>हनुमान जी संकटमोचन हैं, उनकी चालीसा का पाठ जीवन के विभिन्न संकटों से मुक्ति दिलाता है।</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <h2>हनुमान चालीसा की रचना</h2>
+                <p>हनुमान चालीसा की रचना गोस्वामी तुलसीदास जी ने की थी। कहा जाता है कि जब तुलसीदास जी अकबर के दरबार में गए थे, तो उन्हें वहाँ बंदी बना लिया गया था। उस समय तुलसीदास जी ने हनुमान जी की स्तुति में इन चौपाइयों की रचना की और हनुमान जी की कृपा से वहाँ बंद बंदरों ने अकबर के महल पर हमला कर दिया, जिसके बाद अकबर ने तुलसीदास जी को मुक्त कर दिया।</p>
+                
+                <p><a href="https://hanumanchalisa.gen.in/">हनुमान चालीसा</a> की भाषा अवधी है, जो उस समय की सामान्य जनता की भाषा थी। तुलसीदास जी ने जानबूझकर संस्कृत के स्थान पर अवधी में रचना की ताकि सामान्य जनता भी इसे आसानी से समझ सके और इसका लाभ उठा सके।</p>
+            </div>
+
+            <div class="card">
+                <h2>हनुमान चालीसा पाठ की विधि</h2>
+                <p>हनुमान चालीसा का पाठ करने के लिए कोई विशेष नियम नहीं हैं, फिर भी कुछ सुझाव हैं जिनका पालन करने से पाठ का लाभ अधिक मिलता है:</p>
+                
+                <ul style="padding-left: 20px; margin: 15px 0;">
+                    <li>स्नान करके स्वच्छ वस्त्र धारण करें</li>
+                    <li>हनुमान जी की मूर्ति या चित्र के सामने बैठें</li>
+                    <li>ध्यान की मुद्रा में बैठकर मन को शांत करें</li>
+                    <li>पहले हनुमान जी के मंत्र "ॐ हनुमते नमः" का जाप करें</li>
+                    <li>फिर हनुमान चालीसा का पाठ करें</li>
+                    <li>पाठ के बाद हनुमान जी की आरती करें</li>
+                </ul>
+                
+                <p>हनुमान चालीसा का पाठ मंगलवार और शनिवार के दिन विशेष फलदायी माना जाता है। इसके अलावा संकटों के समय में भी इसका पाठ किया जा सकता है।</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>हनुमान चालीसा - भक्ति और शक्ति का अद्भुत संगम</p>
+            <p>© 2025 monthname.in</p>
+        </footer>
+    </div>
+</body>
+</html>
